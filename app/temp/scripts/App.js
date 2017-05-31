@@ -9913,6 +9913,7 @@ var MobileMenu = function () {
 	function MobileMenu() {
 		_classCallCheck(this, MobileMenu);
 
+		this.siteHeader = (0, _jquery2.default)(".site-header");
 		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon"); // menuIcon in this context = siteheadermenuicon class
 		this.menuContent = (0, _jquery2.default)(".site-header__menu-content");
 		this.events(); // use events associated to this
@@ -9929,7 +9930,7 @@ var MobileMenu = function () {
 		key: "toggleTheMenu",
 		value: function toggleTheMenu() {
 			//functions for the above events
-			this.menuContent.toggleClass(".site-header__menu-content--is-visible"); //toggles class on or off
+			this.menuContent.toggleClass("site-header__menu-content--is-visible"); //toggles class on or off
 			console.log("clicked");
 		}
 	}]);
