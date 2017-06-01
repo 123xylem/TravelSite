@@ -12,13 +12,13 @@ class MobileMenu {                             //new constructor class
 
 events(){  //Below is the events associated with above class
 	this.menuIcon.click(this.toggleTheMenu.bind(this))     // when icon clicked use togglemenu function. 
-	                                                    //THIS is bound to togglemenu as opposed to menuIcon function
+	                                                      //THIS is bound to togglemenu as opposed to menuIcon function
       	}
 
 	toggleTheMenu(){       //functions for the above events
 	this.menuContent.toggleClass("site-header__menu-content--is-visible"); //toggles class on or off
-	console.log("clicked")
-	}
+	this.siteHeader.toggleClass("site-header--is-expanded");
+    this.menuIcon.toggleClass("site-header__menu-icon--close-x");	}
 }
 
 export default MobileMenu;
