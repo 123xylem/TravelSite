@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10725,7 +10725,7 @@ var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(7);
+var _jquerySmoothScroll = __webpack_require__(9);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -10740,13 +10740,23 @@ var StickyHeader = function () {
     this.siteHeader = (0, _jquery2.default)(".site-header");
     this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
     this.siteHeaderLinks = (0, _jquery2.default)(".primary-nav a");
+    this.lazyImages = (0, _jquery2.default)(".lazyload");
+
     this.createHeaderWaypoint();
     this.pageSections = (0, _jquery2.default)(".page-section");
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.load(function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: "addSmoothScrolling",
     value: function addSmoothScrolling() {
       //function that adds smoothScroll npm package to our headerlink navs
@@ -10953,7 +10963,8 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10991,7 +11002,8 @@ var modal = new _modal2.default();
 var stickyHeader = new _StickyHeader2.default();
 
 /***/ }),
-/* 7 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

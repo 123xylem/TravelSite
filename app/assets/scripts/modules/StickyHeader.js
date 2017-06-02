@@ -7,13 +7,20 @@ class StickyHeader{
   		this.siteHeader = $(".site-header");
   		this.headerTriggerElement = $(".large-hero__title");
   		this.siteHeaderLinks =$(".primary-nav a");
+      this.lazyImages = $(".lazyload");
+
         this.createHeaderWaypoint();
         this.pageSections =$(".page-section");
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();
+        this.refreshWaypoints();
 	}
 
-
+refreshWaypoints(){
+  this.lazyImages.load(function(){
+    Waypoint.refreshAll();
+  })
+}
 
 addSmoothScrolling(){                //function that adds smoothScroll npm package to our headerlink navs
 	this.siteHeaderLinks.smoothScroll();
