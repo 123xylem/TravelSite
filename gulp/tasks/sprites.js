@@ -9,7 +9,7 @@ var config = {
     spacing:{
       padding:1              //gives 1px padding to all sprites(in sprite file)
     }
-  }
+  },
   mode: {
     css: {
       sprite: 'sprite.svg',
