@@ -34,8 +34,5 @@
     "postcss-nested": "^1.0.1",
     "postcss-simple-vars": "^1.2.0",
     "webpack": "^2.6.1"
-  },
-  "scripts": {
-    "start": "App.js"
   }
 }
